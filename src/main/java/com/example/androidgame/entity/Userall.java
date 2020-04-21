@@ -1,11 +1,20 @@
 package com.example.androidgame.entity;
 
-public class User {
+public class Userall {
     int user_id;
     String user_name;
     String user_pwd;
     String user_type;
     String user_image;
+    String user_url;
+
+    public String getUser_url() {
+        return user_url;
+    }
+
+    public void setUser_url(String user_url) {
+        this.user_url = user_url;
+    }
 
     public int getUser_id() {
         return user_id;

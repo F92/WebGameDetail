@@ -52,9 +52,10 @@
         <table tableName="comment" domainObjectName="Comment"></table>
         <table tableName="game" domainObjectName="Game"></table>
         <table tableName="publish" domainObjectName="Publish"></table>
-        <table tableName="user" domainObjectName="User"></table>
+        <table tableName="userall" domainObjectName="Userall"></table>
         <table tableName="userartical" domainObjectName="Userartical"></table>
         <table tableName="userdiscuss" domainObjectName="Userdiscuss"></table>
+        <table tableName="discuss" domainObjectName="Discuss"></table>
         <!--&lt;!&ndash; 要生成哪些表 &ndash;&gt;-->
         <!--<table tableName="t_user" domainObjectName="user"-->
         <!--enableCountByExample="false" enableUpdateByExample="false"-->
