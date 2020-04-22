@@ -1,58 +1,58 @@
 package com.example.androidgame.entity;
 
 public class Userall {
-    int user_id;
-    String user_name;
-    String user_pwd;
-    String user_type;
-    String user_image;
-    String user_url;
+    int userId;
+    String userName;
+    String userPwd;
+    String userType;
+    String userImage;
+    String userUrl;
 
-    public String getUser_url() {
-        return user_url;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_url(String user_url) {
-        this.user_url = user_url;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getUserPwd() {
+        return userPwd;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUserPwd(String userPwd) {
+        this.userPwd = userPwd;
     }
 
-    public String getUser_pwd() {
-        return user_pwd;
+    public String getUserType() {
+        return userType;
     }
 
-    public void setUser_pwd(String user_pwd) {
-        this.user_pwd = user_pwd;
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 
-    public String getUser_type() {
-        return user_type;
+    public String getUserImage() {
+        return userImage;
     }
 
-    public void setUser_type(String user_type) {
-        this.user_type = user_type;
+    public void setUserImage(String userImage) {
+        this.userImage = userImage;
     }
 
-    public String getUser_image() {
-        return user_image;
+    public String getUserUrl() {
+        return userUrl;
     }
 
-    public void setUser_image(String user_image) {
-        this.user_image = user_image;
+    public void setUserUrl(String userUrl) {
+        this.userUrl = userUrl;
     }
 }

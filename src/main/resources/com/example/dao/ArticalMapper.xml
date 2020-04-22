@@ -285,4 +285,11 @@
       artical_image = #{articalImage,jdbcType=VARCHAR}
     where artical_id = #{articalId,jdbcType=INTEGER}
   </update>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+
+    select
+    <include refid="Base_Column_List" />
+    from userall
+  </select>
 </mapper>

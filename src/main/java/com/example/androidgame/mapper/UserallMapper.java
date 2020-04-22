@@ -93,4 +93,6 @@ public interface UserallMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Userall record);
+
+    List<Userall> selectAll();
 }

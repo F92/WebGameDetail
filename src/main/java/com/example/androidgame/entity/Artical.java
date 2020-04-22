@@ -1,58 +1,60 @@
 package com.example.androidgame.entity;
 
+import java.util.Date;
+
 public class Artical {
-    int artical_id;
-    String artical_name;
-    String artical_introduce;
-    String artical_detail;
-    String artical_date;
-    String artical_image;
+    int articalId;
+    String articalName;
+    String articalIntroduce;
+    String articalDetail;
+    Date articalDate;
+    String articalImage;
 
-    public int getArtical_id() {
-        return artical_id;
+    public int getArticalId() {
+        return articalId;
     }
 
-    public void setArtical_id(int artical_id) {
-        this.artical_id = artical_id;
+    public void setArticalId(int articalId) {
+        this.articalId = articalId;
     }
 
-    public String getArtical_name() {
-        return artical_name;
+    public String getArticalName() {
+        return articalName;
     }
 
-    public void setArtical_name(String artical_name) {
-        this.artical_name = artical_name;
+    public void setArticalName(String articalName) {
+        this.articalName = articalName;
     }
 
-    public String getArtical_introduce() {
-        return artical_introduce;
+    public String getArticalIntroduce() {
+        return articalIntroduce;
     }
 
-    public void setArtical_introduce(String artical_introduce) {
-        this.artical_introduce = artical_introduce;
+    public void setArticalIntroduce(String articalIntroduce) {
+        this.articalIntroduce = articalIntroduce;
     }
 
-    public String getArtical_detail() {
-        return artical_detail;
+    public String getArticalDetail() {
+        return articalDetail;
     }
 
-    public void setArtical_detail(String artical_detail) {
-        this.artical_detail = artical_detail;
+    public void setArticalDetail(String articalDetail) {
+        this.articalDetail = articalDetail;
     }
 
-    public String getArtical_date() {
-        return artical_date;
+    public Date getArticalDate() {
+        return articalDate;
     }
 
-    public void setArtical_date(String artical_date) {
-        this.artical_date = artical_date;
+    public void setArticalDate(Date articalDate) {
+        this.articalDate = articalDate;
     }
 
-    public String getArtical_image() {
-        return artical_image;
+    public String getArticalImage() {
+        return articalImage;
     }
 
-    public void setArtical_image(String artical_image) {
-        this.artical_image = artical_image;
+    public void setArticalImage(String articalImage) {
+        this.articalImage = articalImage;
     }
 }

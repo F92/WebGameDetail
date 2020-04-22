@@ -3,40 +3,40 @@ package com.example.androidgame.entity;
 import java.util.Date;
 
 public class Userdiscuss {
-    int userdiscuss_id;
-    int user_id;
-    int discuss_id;
-    Date userdiscuss_date;
+    int userdiscussId;
+    int userId;
+    int discussId;
+    Date userdiscussDate;
 
-    public int getUserdiscuss_id() {
-        return userdiscuss_id;
+    public int getUserdiscussId() {
+        return userdiscussId;
     }
 
-    public void setUserdiscuss_id(int userdiscuss_id) {
-        this.userdiscuss_id = userdiscuss_id;
+    public void setUserdiscussId(int userdiscussId) {
+        this.userdiscussId = userdiscussId;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public int getDiscuss_id() {
-        return discuss_id;
+    public int getDiscussId() {
+        return discussId;
     }
 
-    public void setDiscuss_id(int discuss_id) {
-        this.discuss_id = discuss_id;
+    public void setDiscussId(int discussId) {
+        this.discussId = discussId;
     }
 
-    public Date getUserdiscuss_date() {
-        return userdiscuss_date;
+    public Date getUserdiscussDate() {
+        return userdiscussDate;
     }
 
-    public void setUserdiscuss_date(Date userdiscuss_date) {
-        this.userdiscuss_date = userdiscuss_date;
+    public void setUserdiscussDate(Date userdiscussDate) {
+        this.userdiscussDate = userdiscussDate;
     }
 }

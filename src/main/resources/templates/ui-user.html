@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<html class="no-js" lang="en">
 <!--<![endif]-->
 
 <head>
@@ -17,116 +17,116 @@
     <link rel="shortcut icon" href="favicon.ico">
 
 
-    <link rel="stylesheet" href="../static/vendors/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/vendors/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../static/vendors/themify-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="../static/vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="../static/vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/vendors/selectFX/css/cs-skin-elastic.css">
 
-    <link rel="stylesheet" href="../static/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
-	<script src="https://cdn.bootcss.com/qs/6.5.1/qs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <script src="https://cdn.bootcss.com/qs/6.5.1/qs.min.js"></script>
 
 
 
 </head>
 
 <body>
-	
-    <!-- Left Panel -->
 
-    <aside id="left-panel" class="left-panel">
-        <nav class="navbar navbar-expand-sm navbar-default">
+<!-- Left Panel -->
 
-            <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href=""><img src="images/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href=""><img src="images/logo2.png" alt="Logo"></a>
-            </div>
+<aside id="left-panel" class="left-panel">
+    <nav class="navbar navbar-expand-sm navbar-default">
 
-            <div id="main-menu" class="main-menu collapse navbar-collapse">
-                <ul class="nav navbar-nav">
+        <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href=""><img src="images/logo.png" alt="Logo"></a>
+            <a class="navbar-brand hidden" href=""><img src="images/logo2.png" alt="Logo"></a>
+        </div>
 
-                    <h3 class="menu-title">管理选项</h3><!-- /.menu-title -->
-                    <li class="menu-item-has-children dropdown">
-                        <a href="ui-artical.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>文章管理</a>
-                    </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="ui-user.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>用户管理</a>
+        <div id="main-menu" class="main-menu collapse navbar-collapse">
+            <ul class="nav navbar-nav">
 
-                    </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="ui-game.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>游戏管理</a>
+                <h3 class="menu-title">管理选项</h3><!-- /.menu-title -->
+                <li class="menu-item-has-children dropdown">
+                    <a href="http://localhost:443/" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>文章管理</a>
+                </li>
+                <li class="menu-item-has-children dropdown">
+                    <a href="ui-user.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>用户管理</a>
 
-                    </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="ui-discuss.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>论坛管理</a>
+                </li>
+                <li class="menu-item-has-children dropdown">
+                    <a href="ui-game.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>游戏管理</a>
 
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </nav>
-    </aside><!-- /#left-panel -->
+                </li>
+                <li class="menu-item-has-children dropdown">
+                    <a href="ui-discuss.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>论坛管理</a>
 
-    <!-- Left Panel -->
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+</aside><!-- /#left-panel -->
 
-    <!-- Right Panel -->
-	
-    <div id="right-panel" class="right-panel">
+<!-- Left Panel -->
 
-        <!-- Header-->
-        <header id="header" class="header">
+<!-- Right Panel -->
 
-            <div class="header-menu">
+<div id="right-panel" class="right-panel">
 
-                <div class="col-sm-7">
-                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    <div class="header-left">
-                        <button class="search-trigger"v-on:click="blockSearch()"><i class="fa fa-search"></i></button>
-                        <div class="form-inline" :style="searchStyle">
-                            <form class="search-form">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search" >
-                                <button class="search-close"  v-on:click="closeSearch()"><i class="fa fa-close"></i></button>
-                            </form>
-                        </div>
+    <!-- Header-->
+    <header id="header" class="header">
 
-                        <div class="dropdown for-notification">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-bell"></i>
-                                <span class="count bg-danger">5</span>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="notification">
-                                <p class="red">You have 3 Notification</p>
-                                <a class="dropdown-item media bg-flat-color-1" href="#">
+        <div class="header-menu">
+
+            <div class="col-sm-7">
+                <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                <div class="header-left">
+                    <button class="search-trigger"v-on:click="blockSearch()"><i class="fa fa-search"></i></button>
+                    <div class="form-inline" :style="searchStyle">
+                        <form class="search-form">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search" >
+                            <button class="search-close"  v-on:click="closeSearch()"><i class="fa fa-close"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="dropdown for-notification">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bell"></i>
+                            <span class="count bg-danger">5</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="notification">
+                            <p class="red">You have 3 Notification</p>
+                            <a class="dropdown-item media bg-flat-color-1" href="#">
                                 <i class="fa fa-check"></i>
                                 <p>Server #1 overloaded.</p>
                             </a>
-                                <a class="dropdown-item media bg-flat-color-4" href="#">
+                            <a class="dropdown-item media bg-flat-color-4" href="#">
                                 <i class="fa fa-info"></i>
                                 <p>Server #2 overloaded.</p>
                             </a>
-                                <a class="dropdown-item media bg-flat-color-5" href="#">
+                            <a class="dropdown-item media bg-flat-color-5" href="#">
                                 <i class="fa fa-warning"></i>
                                 <p>Server #3 overloaded.</p>
                             </a>
-                            </div>
                         </div>
+                    </div>
 
-                        <div class="dropdown for-message">
-                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                    <div class="dropdown for-message">
+                        <button class="btn btn-secondary dropdown-toggle" type="button"
                                 id="message"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="ti-email"></i>
-                                <span class="count bg-primary">9</span>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="message">
-                                <p class="red">You have 4 Mails</p>
-                                <a class="dropdown-item media bg-flat-color-1" href="#">
+                            <i class="ti-email"></i>
+                            <span class="count bg-primary">9</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="message">
+                            <p class="red">You have 4 Mails</p>
+                            <a class="dropdown-item media bg-flat-color-1" href="#">
                                 <span class="photo media-left"><img alt="avatar" src="images/avatar/1.jpg"></span>
                                 <span class="message media-body">
                                     <span class="name float-left">Jonathan Smith</span>
@@ -134,7 +134,7 @@
                                         <p>Hello, this is an example msg</p>
                                 </span>
                             </a>
-                                <a class="dropdown-item media bg-flat-color-4" href="#">
+                            <a class="dropdown-item media bg-flat-color-4" href="#">
                                 <span class="photo media-left"><img alt="avatar" src="images/avatar/2.jpg"></span>
                                 <span class="message media-body">
                                     <span class="name float-left">Jack Sanders</span>
@@ -142,7 +142,7 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur</p>
                                 </span>
                             </a>
-                                <a class="dropdown-item media bg-flat-color-5" href="#">
+                            <a class="dropdown-item media bg-flat-color-5" href="#">
                                 <span class="photo media-left"><img alt="avatar" src="images/avatar/3.jpg"></span>
                                 <span class="message media-body">
                                     <span class="name float-left">Cheryl Wheeler</span>
@@ -150,7 +150,7 @@
                                         <p>Hello, this is an example msg</p>
                                 </span>
                             </a>
-                                <a class="dropdown-item media bg-flat-color-3" href="#">
+                            <a class="dropdown-item media bg-flat-color-3" href="#">
                                 <span class="photo media-left"><img alt="avatar" src="images/avatar/4.jpg"></span>
                                 <span class="message media-body">
                                     <span class="name float-left">Rachel Santos</span>
@@ -158,126 +158,127 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur</p>
                                 </span>
                             </a>
-                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-sm-5">
-                    <div class="user-area dropdown float-right">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
-                        </a>
+            <div class="col-sm-5">
+                <div class="user-area dropdown float-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                    </a>
 
-                        <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+                    <div class="user-menu dropdown-menu">
+                        <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
+                        <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+                        <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
-                        </div>
+                        <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
                     </div>
+                </div>
 
-                    <div class="language-select dropdown" id="language-select">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
+                <div class="language-select dropdown" id="language-select">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
+                        <i class="flag-icon flag-icon-us"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="language">
+                        <div class="dropdown-item">
+                            <span class="flag-icon flag-icon-fr"></span>
+                        </div>
+                        <div class="dropdown-item">
+                            <i class="flag-icon flag-icon-es"></i>
+                        </div>
+                        <div class="dropdown-item">
                             <i class="flag-icon flag-icon-us"></i>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="language">
-                            <div class="dropdown-item">
-                                <span class="flag-icon flag-icon-fr"></span>
-                            </div>
-                            <div class="dropdown-item">
-                                <i class="flag-icon flag-icon-es"></i>
-                            </div>
-                            <div class="dropdown-item">
-                                <i class="flag-icon flag-icon-us"></i>
-                            </div>
-                            <div class="dropdown-item">
-                                <i class="flag-icon flag-icon-it"></i>
-                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <i class="flag-icon flag-icon-it"></i>
                         </div>
                     </div>
-
                 </div>
-            </div>
 
-        </header><!-- /header -->
-        <!-- Header-->
-
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>用户管理</h1>
-                    </div>
-                </div>
             </div>
-            
         </div>
 
-        <div class="content mt-3">
-            <div class="animated fadeIn">
-                <div class="row" v-for="item in info">
+    </header><!-- /header -->
+    <!-- Header-->
+
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>用户管理</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
 
 
-                    <div class="col-md-4" >
-                        <div class="card">
-                            <div class="card-header">
-                                <strong class="card-title mb-3">{{item.user_type}}</strong>
+                <div class="col-md-4" v-for="item in info" >
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title mb-3">{{item.user_type}}</strong>
+                        </div>
+                        <div class="card-body">
+                            <div class="mx-auto d-block">
+                                <img class="rounded-circle mx-auto d-block" v-bind:src="item.user_image" alt="Card image cap">
+                                <h5 class="text-sm-center mt-2 mb-1">{{item.user_name}}</h5>
+                                <div class="location text-sm-center"><a v-bind:href="item.user_url">用户主页</a></div>
                             </div>
-                            <div class="card-body">
-                                <div class="mx-auto d-block">
-                                    <img class="rounded-circle mx-auto d-block" v-bind:src="item.user_image" alt="Card image cap">
-                                    <h5 class="text-sm-center mt-2 mb-1">{{item.user_name}}</h5>
-                                    <div class="location text-sm-center"><a v-bind:href="item.user_url">用户主页</a></div>
-                                </div>
-                                <hr>
-                                
-                            </div>
+                            <hr>
+
                         </div>
                     </div>
+                </div>
 
 
-                    
 
 
-                </div><!-- .row -->
-            </div><!-- .animated -->
-        </div><!-- .content -->
+
+            </div><!-- .row -->
+        </div><!-- .animated -->
+    </div><!-- .content -->
 
 
-    </div><!-- /#right-panel -->
+</div><!-- /#right-panel -->
 
 
-    <!-- Right Panel -->
-	<script>
-		var vm = new Vue({
-		el: '#right-panel',
-		data :{
-				searchStyle :{display:'none'},
-				info:null
-				   
-			},
-			methods:{
-				closeSearch:function(){
-					this.searchStyle.display = 'none';
-				},
-				blockSearch:function(){
-					this.searchStyle.display = 'block';
-				}
-			},
-			mounted(){
-				axios
-				  .post('http://localhost:443/User/GetList')
-				  .then(response => (this.info = response.data))
-				  .catch(function (error) { // 请求失败处理
-				    console.log(error);
-				  });
-			}
-		});
-	</script>
+<!-- Right Panel -->
+<script>
+    var vm = new Vue({
+        el: '#right-panel',
+        data :{
+            searchStyle :{display:'none'},
+            info:null
+
+        },
+        methods:{
+            closeSearch:function(){
+                this.searchStyle.display = 'none';
+            },
+            blockSearch:function(){
+                this.searchStyle.display = 'block';
+            }
+        },
+        mounted(){
+            axios
+                .post('https://localhost:443/Test/GetList')
+                .then(response => (this.info = response.data))
+                .catch(function (error) { // 请求失败处理
+                    console.log(error);
+                });
+
+        }
+    });
+</script>
 </body>
 
 </html>

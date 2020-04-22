@@ -3,40 +3,41 @@ package com.example.androidgame.entity;
 import java.util.Date;
 
 public class Userartical {
-    int userartical_id;
-    int user_id;
-    int artical_id;
-    Date userartical_date;
+    int userarticalId;
+    int userId;
+    int articalId;
+    int gameId;
+    Date userarticalDate;
 
-    public int getUserartical_id() {
-        return userartical_id;
+    public int getUserarticalId() {
+        return userarticalId;
     }
 
-    public void setUserartical_id(int userartical_id) {
-        this.userartical_id = userartical_id;
+    public void setUserarticalId(int userarticalId) {
+        this.userarticalId = userarticalId;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public int getArtical_id() {
-        return artical_id;
+    public int getArticalId() {
+        return articalId;
     }
 
-    public void setArtical_id(int artical_id) {
-        this.artical_id = artical_id;
+    public void setArticalId(int articalId) {
+        this.articalId = articalId;
     }
 
-    public Date getUserartical_date() {
-        return userartical_date;
+    public Date getUserarticalDate() {
+        return userarticalDate;
     }
 
-    public void setUserartical_date(Date userartical_date) {
-        this.userartical_date = userartical_date;
+    public void setUserarticalDate(Date userarticalDate) {
+        this.userarticalDate = userarticalDate;
     }
 }

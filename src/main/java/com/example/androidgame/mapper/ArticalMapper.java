@@ -93,4 +93,6 @@ public interface ArticalMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Artical record);
+
+    List<Artical> selectAll();
 }
