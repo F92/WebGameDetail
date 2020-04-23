@@ -292,4 +292,12 @@
     <include refid="Base_Column_List" />
     from userall
   </select>
+  <select id="selectUserByArtical" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+
+    select
+    <include refid="Base_Column_List" />
+    from userall
+    where
+    user_id = (select user_id from userartical where artical_id = #{articalId,jdbcType=INTEGER})
+  </select>
 </mapper>

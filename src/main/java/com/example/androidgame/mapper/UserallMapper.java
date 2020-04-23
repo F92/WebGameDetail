@@ -95,4 +95,6 @@ public interface UserallMapper {
     int updateByPrimaryKey(Userall record);
 
     List<Userall> selectAll();
+
+    Userall selectUserByArtical(int articalId);
 }
