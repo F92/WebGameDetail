@@ -594,6 +594,76 @@ public class GameExample {
             addCriterion("game_date not between", value1, value2, "gameDate");
             return (Criteria) this;
         }
+
+        public Criteria andGameImageIsNull() {
+            addCriterion("game_image is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageIsNotNull() {
+            addCriterion("game_image is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageEqualTo(String value) {
+            addCriterion("game_image =", value, "gameImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageNotEqualTo(String value) {
+            addCriterion("game_image <>", value, "gameImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageGreaterThan(String value) {
+            addCriterion("game_image >", value, "gameImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageGreaterThanOrEqualTo(String value) {
+            addCriterion("game_image >=", value, "gameImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageLessThan(String value) {
+            addCriterion("game_image <", value, "gameImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageLessThanOrEqualTo(String value) {
+            addCriterion("game_image <=", value, "gameImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageLike(String value) {
+            addCriterion("game_image like", value, "gameImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageNotLike(String value) {
+            addCriterion("game_image not like", value, "gameImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageIn(List<String> values) {
+            addCriterion("game_image in", values, "gameImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageNotIn(List<String> values) {
+            addCriterion("game_image not in", values, "gameImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageBetween(String value1, String value2) {
+            addCriterion("game_image between", value1, value2, "gameImage");
+            return (Criteria) this;
+        }
+
+        public Criteria andGameImageNotBetween(String value1, String value2) {
+            addCriterion("game_image not between", value1, value2, "gameImage");
+            return (Criteria) this;
+        }
     }
 
     /**

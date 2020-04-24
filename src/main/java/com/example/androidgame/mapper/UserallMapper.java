@@ -97,4 +97,6 @@ public interface UserallMapper {
     List<Userall> selectAll();
 
     Userall selectUserByArtical(int articalId);
+
+    Userall selectUserByGame(int gameId);
 }

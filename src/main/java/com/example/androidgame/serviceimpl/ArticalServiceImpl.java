@@ -1,12 +1,11 @@
 package com.example.androidgame.serviceimpl;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.example.androidgame.dto.ArticalList;
+
 import com.example.androidgame.entity.*;
-import com.example.androidgame.mapper.ArticalMapper;
-import com.example.androidgame.mapper.GameMapper;
-import com.example.androidgame.mapper.UserallMapper;
-import com.example.androidgame.mapper.UserarticalMapper;
+import com.example.androidgame.mapper.*;
 import com.example.androidgame.service.ArticalService;
 import com.google.gson.Gson;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
@@ -34,6 +33,8 @@ public class ArticalServiceImpl implements ArticalService {
     UserarticalMapper userarticalMapper;
     @Autowired(required = false)
     GameMapper gameMapper;
+    @Autowired(required = false)
+    PublishMapper publishMapper;
     @Value("${file.uploadFolder}")
     private String uploadFolder;
 
@@ -126,4 +127,32 @@ public class ArticalServiceImpl implements ArticalService {
 
         return "success";
     }
+
+    @Override
+    public String GetUserArticalList(Userall userall) {
+        List<Artical> articalList = articalMapper.selectByUserId(userall.getUserId());
+        String List = new Gson().toJson(articalList);
+        return List;
+    }
+
+    @Override
+    public String GetDevelopArticalList(Userall userall) {
+        JSONObject jsonObject = new JSONObject();
+        PublishExample publishExample = new PublishExample();
+        PublishExample.Criteria criteria1 = publishExample.createCriteria();
+        criteria1.andUserIdEqualTo(userall.getUserId());
+        List<Publish> publishList = publishMapper.selectByExample(publishExample);
+        for (int i=0;i<publishList.size();i++){
+            List<Artical> articalList = new ArrayList<>();
+            articalList = articalMapper.selectByGameId(publishList.get(i).getGameId());
+            Game game = gameMapper.selectByPrimaryKey(publishList.get(i).getGameId());
+            jsonObject.put(game.getGameName(),articalList);
+        }
+        String List = jsonObject.toJSONString();
+        return List;
+    }
+
+
+
+
 }

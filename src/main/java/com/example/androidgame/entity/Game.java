@@ -1,5 +1,7 @@
 package com.example.androidgame.entity;
 
+import com.google.gson.internal.$Gson$Preconditions;
+
 import java.util.Date;
 
 public class Game {
@@ -9,6 +11,15 @@ public class Game {
     String gameDetail;
     String gamePrice;
     Date gameDate;
+    String gameImage;
+
+    public String getGameImage(){
+        return gameImage;
+    }
+
+    public void setGameImage(String gameImage) {
+        this.gameImage = gameImage;
+    }
 
     public int getGameId() {
         return gameId;

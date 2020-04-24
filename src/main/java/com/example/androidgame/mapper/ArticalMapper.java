@@ -95,4 +95,7 @@ public interface ArticalMapper {
     int updateByPrimaryKey(Artical record);
 
     List<Artical> selectAll();
+
+    List<Artical> selectByUserId(int UserId);
+    List<Artical> selectByGameId(int gameId);
 }

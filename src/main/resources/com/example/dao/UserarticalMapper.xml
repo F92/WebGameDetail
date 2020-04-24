@@ -268,4 +268,5 @@
       userartical_date = #{userarticalDate,jdbcType=TIMESTAMP}
     where userartical_id = #{userarticalId,jdbcType=INTEGER}
   </update>
+
 </mapper>

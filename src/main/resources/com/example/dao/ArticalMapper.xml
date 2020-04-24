@@ -292,4 +292,17 @@
     <include refid="Base_Column_List" />
     from artical
   </select>
+  <select id="selectByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select *
+    from artical a
+    join userartical u
+    on a.artical_id = u.artical_id and u.user_id = #{userId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByGameId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select *
+    from artical a
+    join userartical u
+    on a.artical_id = u.artical_id and u.game_id = #{gameId,jdbcType=INTEGER}
+  </select>
 </mapper>

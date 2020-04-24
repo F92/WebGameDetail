@@ -2,6 +2,7 @@ package com.example.androidgame.controller;
 
 import com.example.androidgame.entity.Userall;
 import com.example.androidgame.service.ArticalService;
+import com.example.androidgame.service.GameService;
 import com.example.androidgame.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -28,6 +29,8 @@ public class TestController {
     ArticalService articalService;
     @Value("${file.uploadFolder}")
     private String uploadFolder;
+    @Autowired(required = false)
+    GameService gameService;
 
     @RequestMapping(value = "/GetList")
     public void GetList(HttpSession session, HttpServletResponse response) throws IOException {
@@ -89,5 +92,80 @@ public class TestController {
         }else {
             response.getWriter().write("error");
         }
+    }
+
+    @RequestMapping(value = "/GetUserArticalList")
+    public void GetUserList(HttpSession session,HttpServletResponse response) throws IOException {
+        Userall userall = new Userall();
+        userall.setUserId(1);
+        userall.setUserType("admin");
+        String List = articalService.GetUserArticalList(userall);
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(List);
+    }
+
+    @RequestMapping(value = "/GetDevelopArticalList")
+    public void GetDevelopArticalList(HttpSession session, HttpServletResponse response) throws IOException {
+        Userall userall = new Userall();
+        userall.setUserId(1);
+        userall.setUserType("admin");
+        String List = articalService.GetDevelopArticalList(userall);
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(List);
+    }
+
+    @RequestMapping(value = "/GetDetail")
+    public void GetDetail(@RequestParam(name = "articalId")int articalId,HttpServletResponse response) throws IOException {
+        String articalList = articalService.GetDetail(articalId);
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(articalList);
+    }
+
+    @RequestMapping(value = "/GetGameList")
+    public void GetGameList(HttpSession session, HttpServletResponse response) throws IOException {
+        Userall userall = new Userall();
+        userall.setUserId(1);
+        userall.setUserType("admin");
+        String list = gameService.GetList(userall);
+        if(list.equals("NotAdmin")){
+            response.getWriter().write("error");
+        }else {
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write(list);
+        }
+    }
+
+    @RequestMapping(value = "/GamePublish")
+    public void GamePublish(@RequestParam(name = "gameName")String gameName, @RequestParam(name = "gameIntroduce")String gameIntroduce,
+                        @RequestParam(name = "gamePrice")String gamePrice,@RequestParam(name = "gameDetail")String gameDetail, @RequestParam(name = "gameImage") MultipartFile file, HttpSession session, HttpServletResponse response) throws IOException, ParseException {
+        Userall userall = new Userall();
+        userall.setUserId(1);
+        userall.setUserType("admin");
+        String end = gameService.PublishGame(userall,gameName,gameIntroduce,gamePrice,gameDetail,file);
+        if(end.equals("success")){
+            response.getWriter().write("suceess");
+        }else {
+            response.getWriter().write("error");
+        }
+    }
+
+    @RequestMapping(value = "/GetGameUserList")
+    public void GetGameUserList(HttpSession session,HttpServletResponse response) throws IOException {
+        Userall userall = new Userall();
+        userall.setUserId(1);
+        userall.setUserType("admin");
+        String List = gameService.GetUserGameList(userall);
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(List);
+    }
+
+    @RequestMapping(value = "/GetDevelopGameList")
+    public void GetDevelopGameList(HttpSession session, HttpServletResponse response) throws IOException {
+        Userall userall = new Userall();
+        userall.setUserId(2);
+        userall.setUserType("admin");
+        String List = gameService.GetDevelopGameList(userall);
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(List);
     }
 }

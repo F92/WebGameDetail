@@ -1,8 +1,11 @@
 package com.example.androidgame.mapper;
 
+import com.example.androidgame.entity.Artical;
 import com.example.androidgame.entity.Game;
-import com.example.androidgame.entity.GameExample;
+
 import java.util.List;
+
+import com.example.androidgame.entity.GameExample;
 import org.apache.ibatis.annotations.Param;
 
 public interface GameMapper {
@@ -93,4 +96,8 @@ public interface GameMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Game record);
+
+    List<Game> selectAll();
+
+    List<Game> selectByUserId(int UserId);
 }

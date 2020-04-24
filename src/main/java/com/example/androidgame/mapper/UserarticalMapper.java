@@ -1,5 +1,6 @@
 package com.example.androidgame.mapper;
 
+import com.example.androidgame.entity.Artical;
 import com.example.androidgame.entity.Userartical;
 import com.example.androidgame.entity.UserarticalExample;
 import java.util.List;
@@ -93,4 +94,6 @@ public interface UserarticalMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Userartical record);
+
+
 }

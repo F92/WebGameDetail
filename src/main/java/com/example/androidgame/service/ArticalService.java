@@ -14,4 +14,7 @@ public interface ArticalService {
 
     String PublishArtical(Userall userall,String articalName, String articalIntroduce, String gameName, String articalDetail, MultipartFile file) throws IOException, ParseException;
 
+    String GetUserArticalList(Userall userall);
+
+    String GetDevelopArticalList(Userall userall);
 }

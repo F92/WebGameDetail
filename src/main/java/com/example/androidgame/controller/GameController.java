@@ -1,10 +1,9 @@
 package com.example.androidgame.controller;
 
+import com.example.androidgame.entity.Game;
 import com.example.androidgame.entity.Userall;
 import com.example.androidgame.service.ArticalService;
-import com.example.androidgame.service.UserService;
-import com.google.gson.internal.$Gson$Preconditions;
-import org.apache.catalina.User;
+import com.example.androidgame.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,16 +16,16 @@ import java.io.IOException;
 
 @Controller
 @CrossOrigin
-@RequestMapping(value = "/Artical")
-public class ArticalController {
+@RequestMapping(value = "/Game")
+public class GameController {
 
     @Autowired(required = false)
-    ArticalService articalService;
+    GameService gameService;
 
     @RequestMapping(value = "/GetList")
     public void GetList(HttpSession session, HttpServletResponse response) throws IOException {
         Userall userall = (Userall)session.getAttribute("LoginInfo");
-        String list = articalService.GetList(userall);
+        String list = gameService.GetList(userall);
         if(list.equals("NotAdmin")){
             response.getWriter().write("error");
         }else {
@@ -36,10 +35,9 @@ public class ArticalController {
     }
 
     @RequestMapping(value = "/GetDetail")
-    public void GetDetail(@RequestParam(name = "articalId")int articalId,HttpServletResponse response) throws IOException {
-        String articalList = articalService.GetDetail(articalId);
+    public void GetDetail(@RequestParam(name = "gameId")int gameId, HttpServletResponse response) throws IOException {
+        String gameList = gameService.GetDetail(gameId);
         response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(articalList);
+        response.getWriter().write(gameList);
     }
-
 }
