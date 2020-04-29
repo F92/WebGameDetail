@@ -17,4 +17,5 @@ public interface GameService {
     String GetUserGameList(Userall userall);
 
     String GetDevelopGameList(Userall userall);
+
 }

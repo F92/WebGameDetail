@@ -1,8 +1,10 @@
 package com.example.androidgame.mapper;
 
 import com.example.androidgame.entity.Userall;
-import com.example.androidgame.entity.UserallExample;
+
 import java.util.List;
+
+import com.example.androidgame.entity.UserallExample;
 import org.apache.ibatis.annotations.Param;
 
 public interface UserallMapper {
@@ -99,4 +101,6 @@ public interface UserallMapper {
     Userall selectUserByArtical(int articalId);
 
     Userall selectUserByGame(int gameId);
+
+    Userall selectUserByDiscuss(int discussId);
 }

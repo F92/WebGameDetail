@@ -2,6 +2,7 @@ package com.example.androidgame.entity;
 
 public class Comment {
     int commentId;
+    int discussId;
     int userId;
     int replytoId;
     String commentDetail;
@@ -13,6 +14,14 @@ public class Comment {
 
     public void setCommentId(int commentId) {
         this.commentId = commentId;
+    }
+
+    public int getDiscussId() {
+        return discussId;
+    }
+
+    public void setDiscussId(int discussId) {
+        this.discussId = discussId;
     }
 
     public int getUserId() {

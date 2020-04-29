@@ -1,8 +1,10 @@
 package com.example.androidgame.mapper;
 
 import com.example.androidgame.entity.Buy;
-import com.example.androidgame.entity.BuyExample;
+
 import java.util.List;
+
+import com.example.androidgame.entity.BuyExample;
 import org.apache.ibatis.annotations.Param;
 
 public interface BuyMapper {

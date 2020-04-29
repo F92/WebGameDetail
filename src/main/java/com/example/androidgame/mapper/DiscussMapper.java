@@ -1,8 +1,10 @@
 package com.example.androidgame.mapper;
 
 import com.example.androidgame.entity.Discuss;
-import com.example.androidgame.entity.DiscussExample;
+
 import java.util.List;
+
+import com.example.androidgame.entity.DiscussExample;
 import org.apache.ibatis.annotations.Param;
 
 public interface DiscussMapper {
@@ -93,4 +95,8 @@ public interface DiscussMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Discuss record);
+
+    List<Discuss> selectAll();
+
+    List<Discuss> selectByUserId(int UserId);
 }

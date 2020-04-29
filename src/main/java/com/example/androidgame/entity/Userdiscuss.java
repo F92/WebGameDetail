@@ -6,7 +6,16 @@ public class Userdiscuss {
     int userdiscussId;
     int userId;
     int discussId;
+    int gameId;
     Date userdiscussDate;
+
+    public int getGameId() {
+        return gameId;
+    }
+
+    public void setGameId(int gameId) {
+        this.gameId = gameId;
+    }
 
     public int getUserdiscussId() {
         return userdiscussId;

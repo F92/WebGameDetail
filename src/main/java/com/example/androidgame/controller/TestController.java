@@ -1,9 +1,7 @@
 package com.example.androidgame.controller;
 
 import com.example.androidgame.entity.Userall;
-import com.example.androidgame.service.ArticalService;
-import com.example.androidgame.service.GameService;
-import com.example.androidgame.service.UserService;
+import com.example.androidgame.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -31,19 +29,9 @@ public class TestController {
     private String uploadFolder;
     @Autowired(required = false)
     GameService gameService;
+    @Autowired(required = false)
+    DiscussService discussService;
 
-    @RequestMapping(value = "/GetList")
-    public void GetList(HttpSession session, HttpServletResponse response) throws IOException {
-        Userall userall = new Userall();
-        userall.setUserType("admin");
-        String userList = userService.GetList(userall);
-        if(userList.equals("NotAdmin")){
-            response.getWriter().write("error");
-        }else {
-            response.setCharacterEncoding("UTF-8");
-            response.getWriter().write(userList);
-        }
-    }
 
     @RequestMapping(value = "/GetArticalList")
     public void AGetList(HttpSession session, HttpServletResponse response) throws IOException {
@@ -63,7 +51,6 @@ public class TestController {
         String articalPath = uploadFolder+Math.random()+".txt";
         FileWriter fwriter = null;
         try {
-            // true表示不覆盖原来的内容，而是加到文件的后面。若要覆盖原来的内容，直接省略这个参数就好
             fwriter = new FileWriter(articalPath, true);
             fwriter.write(value);
         } catch (IOException ex) {
@@ -168,4 +155,13 @@ public class TestController {
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(List);
     }
+
+    @RequestMapping(value = "/GetDiscussDetail")
+    public void GetDiscussDetail(@RequestParam(name = "discussId")int discussId, HttpServletResponse response) throws IOException {
+        String discussList = discussService.GetDetail(discussId);
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(discussList);
+    }
+
+
 }

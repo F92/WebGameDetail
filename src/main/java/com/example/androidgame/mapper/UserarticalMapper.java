@@ -1,9 +1,10 @@
 package com.example.androidgame.mapper;
 
-import com.example.androidgame.entity.Artical;
 import com.example.androidgame.entity.Userartical;
-import com.example.androidgame.entity.UserarticalExample;
+
 import java.util.List;
+
+import com.example.androidgame.entity.UserarticalExample;
 import org.apache.ibatis.annotations.Param;
 
 public interface UserarticalMapper {

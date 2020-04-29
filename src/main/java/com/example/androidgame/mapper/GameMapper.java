@@ -1,6 +1,5 @@
 package com.example.androidgame.mapper;
 
-import com.example.androidgame.entity.Artical;
 import com.example.androidgame.entity.Game;
 
 import java.util.List;

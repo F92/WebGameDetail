@@ -1,8 +1,10 @@
 package com.example.androidgame.mapper;
 
 import com.example.androidgame.entity.Publish;
-import com.example.androidgame.entity.PublishExample;
+
 import java.util.List;
+
+import com.example.androidgame.entity.PublishExample;
 import org.apache.ibatis.annotations.Param;
 
 public interface PublishMapper {

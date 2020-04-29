@@ -40,6 +40,7 @@ public class UserServiceImpl implements UserService {
         userall.setUserName(username);
         userall.setUserPwd(password);
         userall.setUserType(usertype);
+        userall.setUserImage("http://localhost:443/upload/222.jpg");
         userallMapper.insertSelective(userall);
 
 
