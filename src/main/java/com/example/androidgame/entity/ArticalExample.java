@@ -465,6 +465,76 @@ public class ArticalExample {
             return (Criteria) this;
         }
 
+        public Criteria andArticalTypeIsNull() {
+            addCriterion("artical_type is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeIsNotNull() {
+            addCriterion("artical_type is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeEqualTo(String value) {
+            addCriterion("artical_type =", value, "articalType");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeNotEqualTo(String value) {
+            addCriterion("artical_type <>", value, "articalType");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeGreaterThan(String value) {
+            addCriterion("artical_type >", value, "articalType");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeGreaterThanOrEqualTo(String value) {
+            addCriterion("artical_type >=", value, "articalType");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeLessThan(String value) {
+            addCriterion("artical_type <", value, "articalType");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeLessThanOrEqualTo(String value) {
+            addCriterion("artical_type <=", value, "articalType");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeLike(String value) {
+            addCriterion("artical_type like", value, "articalType");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeNotLike(String value) {
+            addCriterion("artical_type not like", value, "articalType");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeIn(List<String> values) {
+            addCriterion("artical_type in", values, "articalType");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeNotIn(List<String> values) {
+            addCriterion("artical_type not in", values, "articalType");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeBetween(String value1, String value2) {
+            addCriterion("artical_type between", value1, value2, "articalType");
+            return (Criteria) this;
+        }
+
+        public Criteria andArticalTypeNotBetween(String value1, String value2) {
+            addCriterion("artical_type not between", value1, value2, "articalType");
+            return (Criteria) this;
+        }
+
         public Criteria andArticalDateIsNull() {
             addCriterion("artical_date is null");
             return (Criteria) this;

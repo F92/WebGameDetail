@@ -23,7 +23,7 @@ public class UploadServiceImpl implements UploadService {
         File img = new File(filePath+fileName);
         file.transferTo(img);
         String[] httpimg = new String[1];
-        httpimg[0] = "http://localhost:443/uploadImage/"+fileName;
+        httpimg[0] = "http://192.168.138.146:443/uploadImage/"+fileName;
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("errno",0);
         jsonObject.put("data",httpimg);

@@ -7,6 +7,7 @@ public class Artical {
     String articalName;
     String articalIntroduce;
     String articalDetail;
+    String articalType;
     Date articalDate;
     String articalImage;
 
@@ -40,6 +41,14 @@ public class Artical {
 
     public void setArticalDetail(String articalDetail) {
         this.articalDetail = articalDetail;
+    }
+
+    public String getArticalType() {
+        return articalType;
+    }
+
+    public void setArticalType(String articalType) {
+        this.articalType = articalType;
     }
 
     public Date getArticalDate() {
