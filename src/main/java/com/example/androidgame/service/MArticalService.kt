@@ -1,5 +1,5 @@
 package com.example.androidgame.service
 
 interface MArticalService {
-    fun GetDetail(gameId:Int):String
+    fun GetList(gameName:String):String
 }

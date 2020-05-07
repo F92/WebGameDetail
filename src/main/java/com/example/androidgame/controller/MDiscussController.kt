@@ -2,10 +2,12 @@ package com.example.androidgame.controller
 
 import com.example.androidgame.service.DiscussService
 import com.example.androidgame.service.MDiscussService
+import org.apache.ibatis.annotations.Param
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
 import javax.servlet.http.HttpServletResponse
 
 @Controller
@@ -19,6 +21,13 @@ class MDiscussController {
     @RequestMapping("/GetDiscussList")
     fun GetList(response:HttpServletResponse){
         var s:String = mDiscussService.GetList()
+        response.characterEncoding = "UTF-8"
+        response.writer.write(s)
+    }
+
+    @RequestMapping("/GetNewDiscussList")
+    fun GetDiscussList(@RequestParam(name = "gameName")gameName:String,response: HttpServletResponse){
+        var s:String = mDiscussService.GetDiscussList(gameName)
         response.characterEncoding = "UTF-8"
         response.writer.write(s)
     }

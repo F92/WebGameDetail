@@ -1,6 +1,7 @@
 package com.example.androidgame.serviceimpl
 
 import com.example.androidgame.dto.MDiscussList
+import com.example.androidgame.dto.MDiscussNewList
 import com.example.androidgame.entity.*
 import com.example.androidgame.mapper.DiscussMapper
 import com.example.androidgame.mapper.GameMapper
@@ -42,5 +43,20 @@ class MDiscussServiceImpl : MDiscussService{
             mDiscussList.add(mDiscuss)
         }
         return Gson().toJson(mDiscussList)
+    }
+
+    override fun GetDiscussList(gameName:String): String {
+        var mDiscussNewLists:MutableList<MDiscussNewList> = ArrayList()
+        var discussList:MutableList<Discuss> = discussMapper.selectByGameName(gameName)
+        for (i in discussList){
+            var mDiscussNewList:MDiscussNewList = MDiscussNewList()
+            mDiscussNewList.userImage = userallMapper.selectUserByDiscuss(i.discussId).userImage
+            mDiscussNewList.userName = userallMapper.selectUserByDiscuss(i.discussId).userName
+            mDiscussNewList.discussId = i.discussId
+            mDiscussNewList.discussTitle = i.discussTitle
+            mDiscussNewList.discussDetail = i.discussDetail
+            mDiscussNewLists.add(mDiscussNewList)
+        }
+        return Gson().toJson(mDiscussNewLists)
     }
 }

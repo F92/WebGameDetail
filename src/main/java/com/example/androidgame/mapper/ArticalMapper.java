@@ -100,4 +100,5 @@ public interface ArticalMapper {
 
     List<Artical> selectByUserId(int UserId);
     List<Artical> selectByGameId(int gameId);
+    List<Artical> selectByGameName(String gameName);
 }

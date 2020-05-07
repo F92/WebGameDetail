@@ -103,4 +103,5 @@ public interface UserallMapper {
     Userall selectUserByGame(int gameId);
 
     Userall selectUserByDiscuss(int discussId);
+
 }

@@ -321,4 +321,11 @@
     join userartical u
     on a.artical_id = u.artical_id and u.game_id = #{gameId,jdbcType=INTEGER}
   </select>
+  <select id="selectByGameName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select *
+    from artical a
+    join userartical u
+    on a.artical_id = u.artical_id
+    where u.game_id = (select game_id from game where game_name = #{gameName,jdbcType=VARCHAR})
+  </select>
 </mapper>

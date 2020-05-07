@@ -318,4 +318,6 @@
     user_id = (select user_id from userdiscuss where discuss_id = #{articalId,jdbcType=INTEGER})
   </select>
 
+
+
 </mapper>

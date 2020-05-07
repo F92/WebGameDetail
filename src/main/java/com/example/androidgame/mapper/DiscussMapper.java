@@ -99,4 +99,6 @@ public interface DiscussMapper {
     List<Discuss> selectAll();
 
     List<Discuss> selectByUserId(int UserId);
+
+    List<Discuss> selectByGameName(String gameName);
 }
