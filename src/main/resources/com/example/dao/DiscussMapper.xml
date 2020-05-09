@@ -288,7 +288,14 @@
     from discuss d
     join userdiscuss u
     on d.discuss_id = u.discuss_id
-    where u.game_id = (select game_id from game where game_name = #{gameName,jdbcType=VARCHAR})
+    where u.game_id = (select game_id from game where game_name = #{gameName,jdbcType=VARCHAR})and d.discuss_type = '1'
+  </select>
+  <select id="selectQAByGameName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select *
+    from discuss d
+    join userdiscuss u
+    on d.discuss_id = u.discuss_id
+    where u.game_id = (select game_id from game where game_name = #{gameName,jdbcType=VARCHAR})and d.discuss_type = '2'
   </select>
 
 </mapper>

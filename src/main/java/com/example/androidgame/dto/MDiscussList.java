@@ -3,9 +3,18 @@ package com.example.androidgame.dto;
 public class MDiscussList {
     int discussId;
     String userImage;
+    String userName;
     String gameName;
     String discussTitle;
     String discussDetail;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public int getDiscussId() {
         return discussId;

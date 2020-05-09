@@ -31,4 +31,26 @@ class MDiscussController {
         response.characterEncoding = "UTF-8"
         response.writer.write(s)
     }
+
+    @RequestMapping("/GetQAList")
+    fun GetQAList(@RequestParam(name = "gameName")gameName:String,response: HttpServletResponse){
+        var s:String = mDiscussService.GetQAList(gameName)
+        response.characterEncoding = "UTF-8"
+        response.writer.write(s)
+    }
+
+    @RequestMapping("/GetCommentList")
+    fun GetCommentList(@RequestParam(name = "discussId")discussId:Int,response: HttpServletResponse){
+        var s:String = mDiscussService.GetCommentList(discussId)
+        response.characterEncoding = "UTF-8"
+        response.writer.write(s)
+    }
+
+    @RequestMapping("/Reply")
+    fun Reply(@RequestParam(name="comment")comment:String ,@RequestParam(name="userName")userName:String ,@RequestParam(name="replyName")replyName:String ,@RequestParam(name="discussId")discussId:Int,@RequestParam(name="rcommentId")rcommentId:Int,response: HttpServletResponse){
+        mDiscussService.Reply(comment,userName,replyName,discussId,rcommentId)
+        var s:String = mDiscussService.GetCommentList(discussId)
+        response.characterEncoding = "UTF-8"
+        response.writer.write(s)
+    }
 }

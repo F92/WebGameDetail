@@ -5,8 +5,18 @@ public class Comment {
     int discussId;
     int userId;
     int replytoId;
+    int rcommentId;
     String commentDetail;
     String commentImage;
+
+
+    public int getRcommentId() {
+        return rcommentId;
+    }
+
+    public void setRcommentId(int rcommentId) {
+        this.rcommentId = rcommentId;
+    }
 
     public int getCommentId() {
         return commentId;

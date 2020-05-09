@@ -101,4 +101,6 @@ public interface DiscussMapper {
     List<Discuss> selectByUserId(int UserId);
 
     List<Discuss> selectByGameName(String gameName);
+
+    List<Discuss> selectQAByGameName(String gameName);
 }
