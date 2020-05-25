@@ -2,7 +2,10 @@ package com.example.androidgame.serviceimpl
 
 import com.example.androidgame.dto.MGameHomeList
 import com.example.androidgame.entity.Game
+import com.example.androidgame.entity.GameExample
 import com.example.androidgame.entity.Userall
+import com.example.androidgame.entity.UserallExample
+import com.example.androidgame.mapper.BuyMapper
 import com.example.androidgame.mapper.GameMapper
 import com.example.androidgame.mapper.UserallMapper
 import com.example.androidgame.service.MGameService
@@ -17,6 +20,8 @@ class MGameServiceImpl : MGameService{
     lateinit var gameMapper:GameMapper
     @Autowired(required = false)
     lateinit var userallMapper: UserallMapper
+    @Autowired(required = false)
+    lateinit var buyMapper: BuyMapper
 
     override fun GetList():String {
         var gamelist:List<Game>? = gameMapper.selectAll();
@@ -30,13 +35,29 @@ class MGameServiceImpl : MGameService{
                 mGameHomeList?.gameIntroduce = i.gameIntroduce
                 mGameHomeList?.gameName = i.gameName
                 mGameHomeList?.userName = userall.userName
+                mGameHomeList?.gamePrice = i.gamePrice
                 print(mGameHomeList)
                 if (mGameHomeList != null) {
                     mGameList?.add(mGameHomeList)
                 }
             }
-
         }
         return Gson().toJson(mGameList)
+    }
+
+    override fun Buy(userName: String, gameName: String): String {
+        var buy = com.example.androidgame.entity.Buy()
+        var example1:UserallExample = UserallExample()
+        var criteria1:UserallExample.Criteria = example1.createCriteria()
+        criteria1.andUserNameEqualTo(userName)
+        var userList:MutableList<Userall> = userallMapper.selectByExample(example1)
+        buy.userId = userList[0].userId
+        var example2: GameExample = GameExample()
+        var criteria2:GameExample.Criteria = example2.createCriteria()
+        criteria2.andGameNameEqualTo(gameName)
+        var gameList:MutableList<Game> = gameMapper.selectByExample(example2)
+        buy.gameId = gameList[0].gameId
+        buyMapper.insertSelective(buy)
+        return "success"
     }
 }

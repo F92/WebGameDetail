@@ -31,4 +31,11 @@ class MGameController {
         response.characterEncoding = "UTF-8"
         response.writer.write(gameList)
     }
+
+    @RequestMapping( "/Buy")
+    fun Buy(@RequestParam(name = "userName") userName:String, @RequestParam(name = "gameName") gameName:String, response: HttpServletResponse) {
+        val gameList: String = mGameService.Buy(userName,gameName)
+        response.characterEncoding = "UTF-8"
+        response.writer.write(gameList)
+    }
 }
