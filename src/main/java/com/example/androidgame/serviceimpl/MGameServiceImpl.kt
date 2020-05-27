@@ -60,4 +60,30 @@ class MGameServiceImpl : MGameService{
         buyMapper.insertSelective(buy)
         return "success"
     }
+
+    override fun SearchDiscuss(gameName: String): String {
+        var gameExample:GameExample = GameExample()
+        var criteria:GameExample.Criteria = gameExample.createCriteria()
+        criteria.andGameNameLike("%"+gameName+"%")
+        var gamelist:List<Game>? = gameMapper.selectByExample(gameExample)
+        val mGameList = ArrayList<MGameHomeList>()
+        if (gamelist != null) {
+            for (i in gamelist){
+                var mGameHomeList = MGameHomeList()
+                var userall = userallMapper.selectUserByGame(i.gameId)
+                mGameHomeList?.gameId = i.gameId
+                mGameHomeList?.gameImage = i.gameImage
+                mGameHomeList?.gameIntroduce = i.gameIntroduce
+                mGameHomeList?.gameName = i.gameName
+                mGameHomeList?.userName = userall.userName
+                mGameHomeList?.gamePrice = i.gamePrice
+                print(mGameHomeList)
+                if (mGameHomeList != null) {
+                    mGameList?.add(mGameHomeList)
+                }
+            }
+        }
+        System.out.println(Gson().toJson(mGameList))
+        return Gson().toJson(mGameList)
+    }
 }

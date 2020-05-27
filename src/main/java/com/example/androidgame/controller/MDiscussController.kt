@@ -1,5 +1,6 @@
 package com.example.androidgame.controller
 
+import com.example.androidgame.entity.Publish
 import com.example.androidgame.service.DiscussService
 import com.example.androidgame.service.MDiscussService
 import org.apache.ibatis.annotations.Param
@@ -51,6 +52,12 @@ class MDiscussController {
         mDiscussService.Reply(comment,userName,replyName,discussId,rcommentId)
         var s:String = mDiscussService.GetCommentList(discussId)
         response.characterEncoding = "UTF-8"
+        response.writer.write(s)
+    }
+
+    @RequestMapping("/Publish")
+    fun Publish(@RequestParam(name = "title")title:String, @RequestParam("content")content:String, @RequestParam(name="type")type:String,@RequestParam(name="gameName")gameName:String, @RequestParam(name="userName")userName: String, response: HttpServletResponse){
+        var s:String = mDiscussService.Publish(title,content,type,gameName,userName)
         response.writer.write(s)
     }
 }

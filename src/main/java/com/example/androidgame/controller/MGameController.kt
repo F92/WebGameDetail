@@ -38,4 +38,11 @@ class MGameController {
         response.characterEncoding = "UTF-8"
         response.writer.write(gameList)
     }
+
+    @RequestMapping("/SearchDiscuss")
+    fun SearchDiscuss(@RequestParam(name = "gameName")gameName: String,response:HttpServletResponse){
+        var mg:String = mGameService.SearchDiscuss(gameName)
+        response.characterEncoding = "UTF-8"
+        response.writer.write(mg)
+    }
 }

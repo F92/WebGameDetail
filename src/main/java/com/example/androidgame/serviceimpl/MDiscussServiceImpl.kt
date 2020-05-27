@@ -123,4 +123,34 @@ class MDiscussServiceImpl : MDiscussService{
         commentMapper.insertSelective(comment)
 
     }
+
+    override fun Publish(title: String, content: String, type: String, gameName: String, userName: String):String {
+        var discuss:Discuss = Discuss();
+        discuss.discussDetail = content
+        discuss.discussTitle = title
+        discuss.discussType = type
+        discussMapper.insertSelective(discuss)
+        var discussExample:DiscussExample = DiscussExample()
+        var criteria3:DiscussExample.Criteria = discussExample.createCriteria()
+        criteria3.andDiscussTitleEqualTo(title)
+        var discussList:MutableList<Discuss> = discussMapper.selectByExample(discussExample)
+        var userdiscuss:Userdiscuss = Userdiscuss()
+        userdiscuss.discussId = discussList[0].discussId
+        var userallExample:UserallExample = UserallExample()
+        var criteria:UserallExample.Criteria = userallExample.createCriteria()
+        criteria.andUserNameEqualTo(userName)
+        var userList:MutableList<Userall> = userallMapper.selectByExample(userallExample)
+        userdiscuss.userId = userList[0].userId
+        var gameExample:GameExample = GameExample()
+        var criteria2:GameExample.Criteria = gameExample.createCriteria()
+        criteria2.andGameNameEqualTo(gameName)
+        var gameList:MutableList<Game> = gameMapper.selectByExample(gameExample)
+        userdiscuss.gameId = gameList[0].gameId
+        userdiscussMapper.insertSelective(userdiscuss)
+
+        return "success"
+
+    }
+
+
 }
